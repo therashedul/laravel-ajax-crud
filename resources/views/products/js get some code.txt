@@ -1,0 +1,37 @@
+
+   <a href="" data-toggle="modal" data-target="#updateproduct"
+                                            data-id="{{ $product->id }}" data-name="{{ $product->name }}"
+                                            data-price="{{ $product->price }}" data-category="{{ $product->category }}"
+                                            data-status="{{ $product->status }}" class="update-product"><i
+                                                class="fas fa-edit"></i> </a>
+
+let value1= $('input[name=nameone]').val();
+let value2=$('input[name=nametwo]').val();  
+
+let name = $('.prodcut_name').val();
+let price = $('.prodcut_price').val();
+let category = $('.category').val();
+let status = $('.status:checked').val() ? $('.status:checked').val() : '0';
+
+let id = $(this).data('id');
+let name = $(this).data('name');
+let price = $(this).data('price');
+let price = $(this).data('price');
+
+
+display value
+==========
+$('#updata-id').val(id)
+$('#up-name').val(name)
+$('#up-price').val(price)
+$('#up-category').val(category)
+
+$("#up-category option[value=category]").attr('selected', 'selected');
+$('#up-status').val(status)
+if (status == 1) {
+       $(".mycheckbox").attr('checked', true);
+} else {
+        $(".mycheckbox").attr('checked', false);
+}
+
+
